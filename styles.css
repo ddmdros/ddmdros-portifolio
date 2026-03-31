@@ -568,6 +568,7 @@ p {
 
 /* #region FOOTER */
 
+
 .contact-container {
     display: flex;
     justify-content: center;
@@ -633,3 +634,114 @@ footer .highlight {
 }
 
 /* #endregion FOOTER */
+
+
+/* #region RESPONSIVIDADE (MEDIA QUERIES) */
+
+/* Ajuste para tablets e telas médias */
+@media (max-width: 1024px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    main, footer {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        padding: 8px 15px;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+    }
+}
+
+/* Ajuste específico para celulares (Smartphones) */
+@media (max-width: 768px) {
+    /* Home - Ajustando os textos gigantes */
+    #hi-there {
+        font-size: 50px;
+    }
+
+    #I-am {
+        font-size: 40px;
+    }
+
+    #home p {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    /* Sobre mim - Tabelas */
+    .goals td:nth-child(1) {
+        display: block;
+        transform: none;
+        margin-bottom: 5px;
+    }
+
+    .goals td {
+        display: block;
+        width: 100%;
+    }
+
+    /* Portfolio - 1 Coluna */
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+
+    .end-portfolio {
+        padding-bottom: 50px; /* Reduzi o espaço exagerado no mobile */
+    }
+
+    /* Currículo */
+    .resume-column {
+        min-width: 100%;
+    }
+
+    .column-title {
+        font-size: 26px;
+        text-align: center;
+        display: block;
+        padding-left: 0;
+    }
+
+    /* Contato */
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-card {
+        width: 100%;
+        min-width: unset;
+    }
+
+    /* Sidebar/Menu no celular */
+    .pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-name {
+        font-size: 20px;
+    }
+}
+
+/* #endregion RESPONSIVIDADE */
